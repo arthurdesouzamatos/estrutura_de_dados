@@ -51,7 +51,8 @@ int main() {
     No *lista = NULL;
 
     do{
-        printf("\n\t0 - Sair\n\t1 - Inserir\n\t2 - Imprimir\n\t3");
+        printf("\n\t0 - Sair\n\t1 - Inserir Inicio\n\t2 - Inserir Final\n\t3 - Imprimir\n ");
+        
         scanf("%d", &opcao);
 
         switch(opcao) {
@@ -61,12 +62,12 @@ int main() {
                 inserir_no_inicio(&lista, valor);
                 break;
             case 2:
-                imprimir(lista);
-                break;
-            case 3:
-                printf("Digite um valor");
+                printf("Digite um valor: ");
                 scanf("%d", &valor);
                 inserir_no_fim(&lista, valor);
+                break;
+            case 3:
+                imprimir(lista);
                 break;
 
             default:
